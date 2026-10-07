@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int choice;
+    double amount;
+    double total = 0;
+
+    while (true)
+    {
+        cout << "\n===== EXPENSE TRACKER =====\n";
+        cout << "1. Add Expense\n";
+        cout << "2. Show Total Spending\n";
+        cout << "3. Exit\n";
+
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        if (choice == 1)
+        {
+            cout << "Enter expense amount: ";
+            cin >> amount;
+
+            total = total + amount;
+
+            cout << "Expense added!\n";
+        }
+        else if (choice == 2)
+        {
+            cout << "Total Spending = Rs. " << total << endl;
+        }
+        else if (choice == 3)
+        {
+            cout << "Final Total = Rs. " << total << endl;
+            cout << "Program ended.\n";
+            return 0;
+        }
+        else
+        {
+            cout << "Invalid choice!\n";
+        }
+    }
+
+    return 0;
+}
